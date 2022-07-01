@@ -64,4 +64,14 @@ export class ProductComponent{
       console.log('Enter was pressed');
   }
 
+  email = "example@hotmail.com";
+
+  twoWay(){
+    console.log(this.email);
+  }
+
+  keyUpInput(){
+    
+  }
+
 }

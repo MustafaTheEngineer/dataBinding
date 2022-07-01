@@ -41,3 +41,14 @@
 
 <input type="text" (keyup.enter)="onKeyUpEnter()">
 
+<!-- TWO WAY BINDING -->
+<p>
+    <label for="two-way" class="me-2">E-mail</label>
+    <input id="two-way" type="text" (keyup.enter)="twoWay()" style="margin-top: 50px;"
+    [(ngModel)]="email"
+    >
+    <span class="d-block">
+        {{email}}
+    </span>
+</p>
+
