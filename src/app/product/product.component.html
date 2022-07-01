@@ -36,3 +36,8 @@
     <button name="btn2" class="btn btn-success" (click)="onSubmit($event)">Submit 2</button>
 </div>
 
+<input type="text" (keyup)="onKeyUp($event)">
+
+
+<input type="text" (keyup.enter)="onKeyUpEnter()">
+

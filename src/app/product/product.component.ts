@@ -55,4 +55,13 @@ export class ProductComponent{
     console.log('div was clicked');
   }
 
+  onKeyUp($event:KeyboardEvent){
+    if($event.key === 'Enter'){
+      console.log('Enter was pressed');
+    }
+  }
+  onKeyUpEnter(){
+      console.log('Enter was pressed');
+  }
+
 }
