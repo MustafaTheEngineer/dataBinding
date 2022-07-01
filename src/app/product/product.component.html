@@ -1,0 +1,54 @@
+<div class="bg-primary text-white m-2 p-2">
+    There are {{model.getProducts().length}} products in database.
+</div>
+
+<div>
+    <h2>
+        {{product?.name}}
+    </h2>
+    <h2 [textContent]="product?.name"></h2>
+    <img src="assets/img/{{product?.imageUrl}}" alt="">
+    <img [src]="'assets/img/' + product?.imageUrl">
+</div>
+
+<div [class]="getClasses(1)" class="rounded">
+    <span [style.color]="color">
+        Katalogdaki ilk ürün {{model.getProductById(1)?.name}}
+    </span>
+</div>
+
+<div [class]="getClasses(5)">
+    <span>
+        Katalogdaki beşinci ürün {{model.getProductById(5)?.name}}
+    </span>
+</div>
+
+<button class="btn btn-primary" [class.disabled]="disabled">Submit</button>
+
+<div class="m-2 p-2" [ngClass]="getClassMap(3)" [ngStyle]="getStyles(3)">
+    <span>
+        Katalogdaki üçüncü ürün {{model.getProductById(3)?.name}}
+    </span>
+</div>
+
+<div (click)="onDivClicked($event)" id="divClicked" style="width: 500px;height: 100px; background-color: blue;">
+    <button name="btn1" class="btn btn-success" (click)="onSubmit($event)">Submit 1</button>
+    <button name="btn2" class="btn btn-success" (click)="onSubmit($event)">Submit 2</button>
+</div>
+
+<input type="text" (keyup)="onKeyUp($event)">
+
+
+<input type="text" (keyup.enter)="onKeyUpEnter()">
+
+<!-- TWO WAY BINDING -->
+<p>
+    <label for="two-way" class="me-2">E-mail</label>
+    <input id="two-way" type="text" (keyup.enter)="twoWay()" style="margin-top: 50px;"
+    [(ngModel)]="email"
+    >
+    <span class="d-block">
+        {{email}}
+    </span>
+</p>
+
