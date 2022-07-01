@@ -35,4 +35,24 @@ export class ProductComponent{
         return {}
   }
 
+  color:string = "red";
+
+  getStyles(id:number):Object{
+    return {
+      fontSize : "25px",
+      fontFamily: "Georgia, 'Times New Roman', Times, serif",
+      margin: "20px"
+    }
+  }
+
+  onSubmit($event:MouseEvent){
+    $event.stopPropagation();
+    console.log($event);
+  }
+
+  onDivClicked($event:MouseEvent){
+    console.log($event);
+    console.log('div was clicked');
+  }
+
 }
