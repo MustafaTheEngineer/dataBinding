@@ -52,3 +52,76 @@
     </span>
 </p>
 
+<div id="pipes">
+    <h4>
+        Pipes
+    </h4>
+    <p>
+        {{ title }} <span class="text-success"> - Original</span>
+    </p>
+    <p>
+        {{title | lowercase}}
+    </p>
+    <p>
+        {{ title | uppercase }}
+    </p>
+    <p>
+        {{ title | titlecase }}
+    </p>
+
+    <h4>
+        Date Pipe
+    </h4>
+    <p>
+        {{ today }} <span class="text-success"> - Original</span>
+    </p>
+    <p>
+        {{ today | date }}
+    </p>
+    <p>
+        {{ today | date: 'fullDate' }}
+    </p>
+    <p>
+        {{ today | date: 'medium' }}
+    </p>
+    <p>
+        {{ today | date: 'shortTime' }}
+    </p>
+    <p>
+        {{ today | date: 'h:mm:ss' }}
+    </p>
+    <h4>
+        Decimal Pipe
+    </h4>
+    <p>
+        {{ students }} <span class="text-success"> - Original</span>
+    </p>
+    <p>
+        {{ students | number }}
+    </p>
+    <p>
+        {{ price | number: '1.1-1' }}
+    </p>
+    <h4>
+        Currency Pipe
+    </h4>
+    <p>
+        {{ price | currency }}
+    </p>
+    <p>
+        {{ price | currency: 'EUR' }}
+    </p>
+    <h4>
+        Percent Pipe
+    </h4>
+    <p>
+        {{ completed }} <span class="text-success"> - Original</span>
+    </p>
+    <p>
+        {{completed | percent}}
+    </p>
+    <p>
+        {{completed | percent: '2.2-2'}}
+    </p>
+</div>
+

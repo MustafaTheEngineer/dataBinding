@@ -74,4 +74,10 @@ export class ProductComponent{
     
   }
 
+  today:number = Date.now();
+  title:string = 'Angular Tutorial';
+  students:number = 21536;
+  price:number = 395.99;
+  completed:number = 0.26;
+
 }

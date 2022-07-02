@@ -1,0 +1,9 @@
+#pipes{
+    border: 3px solid brown;
+    margin: 3px;
+    padding: 10px;
+}
+
+#pipes h4{
+    color: rgb(142, 45, 45);
+}
